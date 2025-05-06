@@ -167,7 +167,7 @@
       <td>6 → 7</td>
       <td>27</td>
     </tr>
-    <tr class="highlight" data-page="33" data-scope="Efficient border surveillance & maritime security." data-results="• Modular sensor fusion.\n• Autonomous maritime patrol drones.\n• Human-rights safeguarding AI." data-criteria="• IA action.\n• ≥2 Border/Coast Guards from ≥2 Member States.">
+    <tr class="highlight" data-page="33" data-scope="Efficient border surveillance & maritime security." data-results="• Modular sensor fusion.\n■ Autonomous maritime patrol drones.\n■ Human-rights safeguarding AI." data-criteria="• IA action.\n■ ≥2 Border/Coast Guards from ≥2 Member States.">
       <td>BM</td>
       <td>HORIZON-CL3-2025-01-BM-01</td>
       <td>Efficient border surveillance and maritime security</td>
@@ -198,32 +198,51 @@
 
 <script>
   const tooltip = document.getElementById('tooltip');
+
   document.querySelectorAll('tr.highlight').forEach(row => {
-    row.addEventListener('mouseenter', e => {
+    const showTip = e => {
       const { scope, results, criteria } = row.dataset;
       tooltip.innerHTML = `
         <strong>Scope</strong><br>${scope}<br><br>
         <strong>Expected Results</strong><ul>
           ${results.split('•').filter(Boolean).map(r => `<li>${r.trim()}</li>`).join('')}
         </ul>
-        <strong>Key Eligibility Criteria</strong><br>${criteria}`;
+        <strong>Key Eligibility Criteria</strong><br>${criteria}
+      `;
       tooltip.style.display = 'block';
-    });
-    row.addEventListener('mousemove', e => {
-      tooltip.style.top = (e.pageY + 15) + 'px';
-      tooltip.style.left = (e.pageX + 15) + 'px';
-    });
-    row.addEventListener('mouseleave', () => {
-      tooltip.style.display = 'none';
-    });
+    };
+    const moveTip = e => {
+      const x = e.touches ? e.touches[0].pageX : e.pageX;
+      const y = e.touches ? e.touches[0].pageY : e.pageY;
+      tooltip.style.top  = (y + 15) + 'px';
+      tooltip.style.left = (x + 15) + 'px';
+    };
+    const hideTip = () => tooltip.style.display = 'none';
+
+    // Mouse
+    row.addEventListener('mouseenter', showTip);
+    row.addEventListener('mousemove', moveTip);
+    row.addEventListener('mouseleave', hideTip);
+
+    // Touch (iPhone)
+    row.addEventListener('touchstart', e => {
+      e.preventDefault();
+      showTip(e);
+      moveTip(e);
+    }, { passive: false });
+    row.addEventListener('touchmove', moveTip);
+    row.addEventListener('touchend', hideTip);
+    row.addEventListener('touchcancel', hideTip);
+
+    // Click → open PDF inline
     row.addEventListener('click', () => {
       const page = row.dataset.page || '1';
       const url = `https://raw.githack.com/geftychidis/IKH-CL3-2025/main/ec_rtd_he-wp-2025-cluster3-pre.pdf#page=${page}`;
-      let newWin = window.open(url, '_blank');
-      if (!newWin) {
+      let win = window.open(url, '_blank');
+      if (!win) {
         setTimeout(() => {
-          newWin = window.open(url, '_blank');
-          if (!newWin) window.location.href = url;
+          win = window.open(url, '_blank');
+          if (!win) window.location.href = url;
         }, 300);
       }
     });
