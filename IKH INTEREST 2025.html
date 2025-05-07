@@ -5,581 +5,329 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horizon Europe Cluster 3 – Projects 2025</title>
   <style>
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-      margin: 20px;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
       background-color: #f8f9fa;
       color: #333;
-    }
-    h1 { 
-      text-align: center; 
-      margin-bottom: 1em; 
-      color: #005a87;
-      font-size: 1.8rem;
     }
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 15px;
     }
-    table { 
-      width: 100%; 
-      border-collapse: collapse; 
+    h1 {
+      text-align: center;
+      margin-bottom: 1em;
+      color: #005a87;
+      font-size: 1.8rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
       margin-bottom: 1em;
       background-color: #fff;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    th, td { 
-      border: 1px solid #e0e0e0; 
-      padding: 12px 8px; 
-      text-align: left; 
+    th, td {
+      border: 1px solid #e0e0e0;
+      padding: 12px 8px;
+      text-align: left;
       font-size: 0.9rem;
       position: relative;
     }
-    th { 
-      background-color: #005a87; 
-      color: white;
+    th {
+      background-color: #005a87;
+      color: #fff;
       font-weight: 600;
       position: sticky;
       top: 0;
       z-index: 10;
     }
-    tr {
-      transition: background-color 0.2s ease;
-    }
-    tr:hover { 
-      background-color: #f0f7ff; 
-      cursor: pointer; 
-    }
-    tr.highlight { 
-      background-color: #ffffcc; 
-    }
-    /* IKH main topics style */
-    tr.main-topic { 
-      background-color: #ffcc99 !important; 
-    }
-    tr.main-topic:hover {
-      background-color: #ffbf80 !important;
-    }
+    tr:hover { background-color: #f0f7ff; cursor: pointer; }
+    tr.highlight { background-color: #ffffcc; }
+    tr.main-topic { background-color: #ffcc99 !important; }
+    tr.main-topic:hover { background-color: #ffbf80 !important; }
     .tooltip {
       display: none;
       position: absolute;
-      max-width: 350px;
+      max-width: 300px;
       background: #fff;
       border: 1px solid #333;
-      padding: 15px;
+      padding: 10px;
       border-radius: 5px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       z-index: 1000;
       pointer-events: none;
       font-size: 0.85rem;
       line-height: 1.4;
-      text-align: left;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.2s ease;
     }
-    .tooltip-title {
-      font-weight: bold;
-      color: #005a87;
-      margin-bottom: 8px;
-      border-bottom: 1px solid #e0e0e0;
-      padding-bottom: 5px;
-    }
-    .tooltip strong {
-      color: #005a87;
-    }
-    .tooltip ul {
-      margin: 5px 0;
-      padding-left: 20px;
-    }
-    .tooltip li {
-      margin-bottom: 3px;
-    }
-    td.funding-col, th.funding-col {
-      text-align: center;
-      white-space: nowrap;
-    }
-    td.num-projects, th.num-projects {
-      text-align: center;
-    }
-    /* Responsive adjustments */
+    .funding-col, .num-projects { text-align: center; white-space: nowrap; }
     @media (max-width: 768px) {
-      table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-      }
-      th, td {
-        padding: 8px 6px;
-        font-size: 0.8rem;
-      }
-      .tooltip {
-        max-width: 280px;
-        font-size: 0.75rem;
-      }
-      /* For mobile devices, make tooltip appear on tap and remain visible */
-      .mobile-tooltip {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        max-width: 100%;
-        z-index: 2000;
-        border-radius: 5px 5px 0 0;
-        opacity: 1;
-      }
+      table { display: block; overflow-x: auto; white-space: nowrap; }
+      th, td { padding: 8px 6px; font-size: 0.8rem; }
+      .tooltip { max-width: 250px; font-size: 0.75rem; }
     }
   </style>
 </head>
 <body>
-
-<div class="container">
-  <h1>Horizon Europe Cluster 3 – Projects 2025</h1>
-
-  <table id="projects-table">
-    <thead>
-      <tr>
-        <th>Cluster</th>
-        <th>Topic Code</th>
-        <th>Title</th>
-        <th>Type of Action</th>
-        <th>TRL Expected</th>
-        <th class="funding-col">Funding per Project</th>
-        <th class="num-projects">Projects to Fund</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="highlight main-topic" data-page="55" data-topic="HORIZON-CL3-2025-01-DRS-01" data-scope="Engage citizens and local/regional authorities in enhanced disaster risk awareness, including education and preparedness." data-results="• Increased local disaster awareness and preparedness frameworks.
-- Innovative education modules for citizens and authorities.
-- Community engagement toolkits." data-criteria="• RIA action.
-- Active involvement of at least 1 Civil Society Organisation and 1 Police Authority from ≥2 Member States." data-funding="Around 4.00" data-projects="3">
-        <td>DRS</td>
-        <td>HORIZON-CL3-2025-01-DRS-01</td>
-        <td>Citizen and regional/local authority engagement in disaster risk awareness</td>
-        <td>RIA</td>
-        <td>5 → 4</td>
-        <td class="funding-col">€4.00M</td>
-        <td class="num-projects">3</td>
-      </tr>
-      <tr class="highlight" data-page="58" data-topic="HORIZON-CL3-2025-01-DRS-02" data-scope="Improve disaster risk management and governance to ensure self-sufficiency and sustainability of operations." data-results="• New governance models for disaster response.
-- Sustainable operation protocols.
-- Self-sufficiency metrics and toolkits." data-criteria="• RIA action.
-- Involvement of at least 1 public authority and 1 NGO from ≥2 Member States." data-funding="Around 3.50" data-projects="3">
-        <td>DRS</td>
-        <td>HORIZON-CL3-2025-01-DRS-02</td>
-        <td>Disaster risk management and governance</td>
-        <td>RIA</td>
-        <td>5 → 3.5</td>
-        <td class="funding-col">€3.50M</td>
-        <td class="num-projects">3</td>
-      </tr>
-      <tr class="highlight" data-page="61" data-topic="HORIZON-CL3-2025-01-DRS-03" data-scope="Test/validate tools, technologies and data for cross-border prevention, preparedness and response to climate, geological or CBRN threats." data-results="• Validated cross-border warning systems.
-- Toolkit for climate/extreme event response.
-- CBRN emergency data frameworks." data-criteria="• IA action.
-- At least 3 first-responder organisations from ≥3 Member States." data-funding="Around 4.50" data-projects="3">
-        <td>DRS</td>
-        <td>HORIZON-CL3-2025-01-DRS-03</td>
-        <td>Cross-border climate, geological, CBRN events</td>
-        <td>IA</td>
-        <td>6 → 4.5</td>
-        <td class="funding-col">€4.50M</td>
-        <td class="num-projects">3</td>
-      </tr>
-      <tr class="highlight main-topic" data-page="65" data-topic="HORIZON-CL3-2025-01-DRS-04" data-scope="Advance autonomous systems and robotics for high-risk disaster response in conflict-afflicted zones." data-results="• Multi-function autonomous platforms.
-- Enhanced situational awareness sensors.
-- Training guidelines for first responders." data-criteria="• IA action.
-- At least 3 first-responder bodies, including Ukraine partners." data-funding="Around 5.00" data-projects="1">
-        <td>DRS</td>
-        <td>HORIZON-CL3-2025-01-DRS-04</td>
-        <td>Autonomous systems and robotics for disaster response</td>
-        <td>IA</td>
-        <td>6 → 8</td>
-        <td class="funding-col">€5.00M</td>
-        <td class="num-projects">1</td>
-      </tr>
-      <tr class="highlight" data-page="44" data-topic="HORIZON-CL3-2025-01-INFRA-01" data-scope="Improve preparedness, response and recovery from large-scale critical infrastructure disruptions." data-results="• New resilience modelling tools.
-- Virtual/physical stress-test platforms.
-- Post-incident investigation solutions." data-criteria="• IA action.
-- ≥3 practitioners (operators/authorities) from ≥3 Member States." data-funding="Around 5.00" data-projects="3">
-        <td>INFRA</td>
-        <td>HORIZON-CL3-2025-01-INFRA-01</td>
-        <td>Preparedness, response and recovery from CI disruption</td>
-        <td>IA</td>
-        <td>6 → 7</td>
-        <td class="funding-col">€5.00M</td>
-        <td class="num-projects">3</td>
-      </tr>
-      <tr class="highlight" data-page="47" data-topic="HORIZON-CL3-2025-01-INFRA-02" data-scope="Explore the role of the human factor for critical infrastructure resilience." data-results="• Human-centric risk assessment tools.
-- Insider-threat detection methods.
-- Training curricula for operators." data-criteria="• RIA action.
-- ≥3 practitioners (operators/authorities) from ≥3 Member States." data-funding="Around 3.50" data-projects="2">
-        <td>INFRA</td>
-        <td>HORIZON-CL3-2025-01-INFRA-02</td>
-        <td>Human factor in infrastructure resilience</td>
-        <td>RIA</td>
-        <td>5</td>
-        <td class="funding-col">€3.50M</td>
-        <td class="num-projects">2</td>
-      </tr>
-      <tr class="highlight main-topic" data-page="19" data-topic="HORIZON-CL3-2025-01-FCT-01" data-scope="Modern info & forensic evidence analysis and frontline policing." data-results="• Next-gen forensic toolchains.
-- Cloud-enabled on-site analysis.
-- Smart policing gear." data-criteria="• RIA action.
-- ≥2 Police Authorities from ≥2 Member States." data-funding="Around 3.00" data-projects="6">
-        <td>FCT</td>
-        <td>HORIZON-CL3-2025-01-FCT-01</td>
-        <td>Modern information and forensic evidence analysis and frontline policing</td>
-        <td>RIA</td>
-        <td>5</td>
-        <td class="funding-col">€3.00M</td>
-        <td class="num-projects">6</td>
-      </tr>
-      <tr class="highlight" data-page="21" data-topic="HORIZON-CL3-2025-01-FCT-02" data-scope="Prevention, detection and deterrence of crime & terrorism via societal understanding." data-results="• Socio-cultural crime profiling.
-- Radicalisation awareness campaigns.
-- Community engagement metrics." data-criteria="• RIA action.
-- ≥1 Police Authority + 1 NGO/CSO from ≥2 Member States." data-funding="Around 3.00" data-projects="4">
-        <td>FCT</td>
-        <td>HORIZON-CL3-2025-01-FCT-02</td>
-        <td>Prevention, detection and deterrence of crime and terrorism</td>
-        <td>RIA</td>
-        <td>5</td>
-        <td class="funding-col">€3.00M</td>
-        <td class="num-projects">4</td>
-      </tr>
-      <tr class="highlight main-topic" data-page="27" data-topic="HORIZON-CL3-2025-01-FCT-04" data-scope="Humanitarian demining & UXO risk education." data-results="• Autonomous mine-detection tools.
-- UXO risk-education curricula.
-- SOPs for demining practitioners." data-criteria="• IA action.
-- ≥1 humanitarian demining org + 2 NGOs (incl. Ukraine)." data-funding="Around 6.00" data-projects="1">
-        <td>FCT</td>
-        <td>HORIZON-CL3-2025-01-FCT-04</td>
-        <td>Humanitarian demining / UXO and risk education</td>
-        <td>IA</td>
-        <td>6 → 7</td>
-        <td class="funding-col">€6.00M</td>
-        <td class="num-projects">1</td>
-      </tr>
-      <tr class="highlight" data-page="36" data-topic="HORIZON-CL3-2025-01-BM-02" data-scope="Secured & facilitated crossing of external borders." data-results="• Secure digital ID wallets.
-- Biometric verification sandboxes.
-- Automated border‐control kiosks." data-criteria="• RIA action.
-- ≥2 Border/Coast Guards from ≥2 Member States." data-funding="Around 3.00" data-projects="3">
-        <td>BM</td>
-        <td>HORIZON-CL3-2025-01-BM-02</td>
-        <td>Secured and facilitated crossing of external borders</td>
-        <td>RIA</td>
-        <td>5</td>
-        <td class="funding-col">€3.00M</td>
-        <td class="num-projects">3</td>
-      </tr>
-      <tr class="highlight main-topic" data-page="39" data-topic="HORIZON-CL3-2025-01-BM-03" data-scope="Better customs and supply chain security." data-results="• Tamper-evident logistics trackers.
-- Illicit goods detection analytics.
-- Supply-chain risk dashboards." data-criteria="• IA action.
-- ≥2 Customs Authorities from ≥2 Member States." data-funding="Around 3.00" data-projects="3">
-        <td>BM</td>
-        <td>HORIZON-CL3-2025-01-BM-03</td>
-        <td>Better customs and supply chain security</td>
-        <td>IA</td>
-        <td>6 → 7</td>
-        <td class="funding-col">€3.00M</td>
-        <td class="num-projects">3</td>
-      </tr>
-      <tr class="highlight" data-page="73" data-topic="HORIZON-CL3-2025-01-SSRI-02" data-scope="Uptake Acceleration Services to bridge R&I and market deployment." data-results="• Innovation support schemes.
-- SME acceleration roadmaps.
-- Pilot adoption frameworks." data-criteria="• CSA action.
-- Public–private coordination." data-funding="Around 5.00" data-projects="1">
-        <td>SSRI</td>
-        <td>HORIZON-CL3-2025-01-SSRI-02</td>
-        <td>Uptake Acceleration Services</td>
-        <td>CSA</td>
-        <td>N/A</td>
-        <td class="funding-col">€5.00M</td>
-        <td class="num-projects">1</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div id="tooltip" class="tooltip"></div>
-</div>
+  <div class="container">
+    <h1>Horizon Europe Cluster 3 – Projects 2025</h1>
+    <table id="projects-table">
+      <thead>
+        <tr>
+          <th>Cluster</th>
+          <th>Topic Code</th>
+          <th>Title</th>
+          <th>Type of Action</th>
+          <th>TRL Expected</th>
+          <th class="funding-col">Funding</th>
+          <th class="num-projects"># Projects</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- DRS -->
+        <tr class="highlight main-topic" data-page="55" data-scope="Engage citizens and local/regional authorities in enhanced disaster risk awareness, including education and preparedness." data-results="• Increased local disaster awareness and preparedness frameworks.\n• Innovative education modules for citizens and authorities.\n• Community engagement toolkits." data-criteria="• RIA action.\n• Active involvement of at least 1 Civil Society Organisation and 1 Police Authority from ≥2 Member States." data-funding="4.00" data-projects="3">
+          <td>DRS</td>
+          <td>HORIZON-CL3-2025-01-DRS-01</td>
+          <td>Citizen and regional/local authority engagement in disaster risk awareness</td>
+          <td>RIA</td>
+          <td>5 → 4</td>
+          <td class="funding-col">€ 4.00 M</td>
+          <td class="num-projects">3</td>
+        </tr>
+        <tr class="highlight" data-page="58" data-scope="Improve disaster risk management and governance to ensure self-sufficiency and sustainability of operations." data-results="• New governance models for disaster response.\n• Sustainable operation protocols.\n• Self-sufficiency metrics and toolkits." data-criteria="• RIA action.\n• Involvement of at least 1 public authority and 1 NGO from ≥2 Member States." data-funding="3.50" data-projects="3">
+          <td>DRS</td>
+          <td>HORIZON-CL3-2025-01-DRS-02</td>
+          <td>Disaster risk management and governance</td>
+          <td>RIA</td>
+          <td>5 → 3.5</td>
+          <td class="funding-col">€ 3.50 M</td>
+          <td class="num-projects">3</td>
+        </tr>
+        <tr class="highlight" data-page="61" data-scope="Test/validate tools, technologies and data for cross-border prevention, preparedness and response to climate, geological or CBRN threats." data-results="• Validated cross-border warning systems.\n• Toolkit for climate/extreme event response.\n• CBRN emergency data frameworks." data-criteria="• IA action.\n• At least 3 first-responder organisations from ≥3 Member States." data-funding="4.50" data-projects="3">
+          <td>DRS</td>
+          <td>HORIZON-CL3-2025-01-DRS-03</td>
+          <td>Cross-border climate, geological, CBRN events</td>
+          <td>IA</td>
+          <td>6 → 4.5</td>
+          <td class="funding-col">€ 4.50 M</td>
+          <td class="num-projects">3</td>
+        </tr>
+        <tr class="highlight main-topic" data-page="65" data-scope="Advance autonomous systems and robotics for high-risk disaster response in conflict-afflicted zones." data-results="• Multi-function autonomous platforms.\n• Enhanced situational awareness sensors.\n• Training guidelines for first responders." data-criteria="• IA action.\n• At least 3 first-responder bodies, including Ukraine partners." data-funding="5.00" data-projects="1">
+          <td>DRS</td>
+          <td>HORIZON-CL3-2025-01-DRS-04</td>
+          <td>Autonomous systems and robotics for disaster response</td>
+          <td>IA</td>
+          <td>6 → 8</td>
+          <td class="funding-col">€ 5.00 M</td>
+          <td class="num-projects">1</td>
+        </tr>
+        <!-- INFRA -->
+        <tr class="highlight" data-page="44" data-scope="Improve preparedness, response and recovery from large-scale critical infrastructure disruptions." data-results="• New resilience modelling tools.\n• Virtual/physical stress-test platforms.\n• Post-incident investigation solutions." data-criteria="• IA action.\n• ≥3 practitioners from ≥3 Member States." data-funding="5.00" data-projects="3">
+          <td>INFRA</td>
+          <td>HORIZON-CL3-2025-01-INFRA-01</td>
+          <td>Preparedness, response and recovery from CI disruption</td>
+          <td>IA</td>
+          <td>6 → 7</td>
+          <td class="funding-col">€ 5.00 M</td>
+          <td class="num-projects">3</td>
+        </tr>
+        <tr class="highlight" data-page="47" data-scope="Explore the role of the human factor for critical infrastructure resilience." data-results="• Human-centric risk assessment tools.\n• Insider-threat detection methods.\n• Training curricula for operators." data-criteria="• RIA action.\n• ≥3 practitioners from ≥3 Member States." data-funding="3.50" data-projects="2">
+          <td>INFRA</td>
+          <td>HORIZON-CL3-2025-01-INFRA-02</td>
+          <td>Human factor in infrastructure resilience</td>
+          <td>RIA</td>
+          <td>5</td>
+          <td class="funding-col">€ 3.50 M</td>
+          <td class="num-projects">2</td>
+        </tr>
+        <!-- SSRI -->
+        <tr class="highlight" data-page="70" data-scope="National Contact Points for security & cybersecurity – community building for resilient societies." data-results="• NCP training modules.\n• Community-of-practice platforms.\n• Best-practice guidelines." data-criteria="• CSA action.\n• Single coordinating body." data-funding="3.00" data-projects="1">
+          <td>SSRI</td>
+          <td>HORIZON-CL3-2025-01-SSRI-01</td>
+          <td>NCPs for security & cybersecurity</td>
+          <td>CSA</td>
+          <td>N/A</td>
+          <td class="funding-col">€ 3.00 M</td>
+          <td class="num-projects">1</td>
+        </tr>
+        <tr class="highlight" data-page="73" data-scope="Uptake Acceleration Services..." data-results="• Innovation support schemes.\n• SME acceleration roadmaps.\n• Pilot adoption frameworks." data-criteria="• CSA action.\n• Public–private coordination." data-funding="5.00" data-projects="1">
+          <td>SSRI</td>
+          <td>HORIZON-CL3-2025-01-SSRI-02</td>
+          <td>Uptake Acceleration Services</td>
+          <td>CSA</td>
+          <td>N/A</td>
+          <td class="funding-col">€ 5.00 M</td>
+          <td class="num-projects">1</td>
+        </tr>
+        <tr class="highlight" data-page="76" data-scope="Open grounds for PCP..." data-results="• Buyer community analysis.\n• PCP roadmaps.\n• R&D service procurement frameworks." data-criteria="• CSA action.\n• ≥3 procurers from ≥3 Member States." data-funding="1.00" data-projects="2">
+          <td>SSRI</td>
+          <td>HORIZON-CL3-2025-01-SSRI-03</td>
+          <td>Open grounds for PCP</td>
+          <td>CSA</td>
+          <td>6 → 8</td>
+          <td class="funding-col">€ 1.00 M</td>
+          <td class="num-projects">2</td>
+        </tr>
+        <tr class="highlight" data-page="79" data-scope="Open proposals for SME innovation..." data-results="• SME innovation calls.\n• Market-access toolkits.\n• Pilot demo support." data-criteria="• IA action.\n• SME consortiums." data-funding="1.50" data-projects="2">
+          <td>SSRI</td>
+          <td>HORIZON-CL3-2025-01-SSRI-04</td>
+          <td>Open proposals for SME innovation</td>
+          <td>IA</td>
+          <td>N/A</td>
+          <td class="funding-col">€ 1.50 M</td>
+          <td class="num-projects">2</td>
+        </tr>
+        <tr class="highlight" data-page="82" data-scope="Data repository for security R&I..." data-results="• Centralized metadata catalog.\n• Secure data sharing protocols.\n• Long-term archiving frameworks." data-criteria="• IA action.\n• Data governance structures." data-funding="3.00" data-projects="1">
+          <td>SSRI</td>
+          <td>HORIZON-CL3-2025-01-SSRI-05</td>
+          <td>Data repository</td>
+          <td>IA</td>
+          <td>N/A</td>
+          <td class="funding-col">€ 3.00 M</td>
+          <td class="num-projects">1</td>
+        </tr>
+        <tr class="highlight" data-page="86" data-scope="Demand-led innovation via PCP..." data-results="• PCP strategic plans.\n• Joint procurement agreements.\n• Scale-up roadmaps." data-criteria="• PCP action.\n• ≥3 procurers from ≥3 Member States." data-funding="5.50" data-projects="1">
+          <td>SSRI</td>
+          <td>HORIZON-CL3-2025-01-SSRI-06</td>
+          <td>Demand-led innovation via PCP</td>
+          <td>PCP</td>
+          <td>6 → 8</td>
+          <td class="funding-col">€ 5.50 M</td>
+          <td class="num-projects">1</td>
+        </tr>
+        <!-- FCT -->
+        <tr class="highlight main-topic" data-page="19" data-scope="Modern information & forensic evidence analysis and frontline policing." data-results="• Next-gen forensic toolchains.\n• Cloud-enabled on-site analysis.\n• Smart policing gear." data-criteria="• RIA action.\n• ≥2 Police Authorities from ≥2 Member States." data-funding="3.00" data-projects="6">
+          <td>FCT</td>
+          <td>HORIZON-CL3-2025-01-FCT-01</td>
+          <td>Modern information and forensic evidence analysis and frontline policing</td>
+          <td>RIA</td>
+          <td>5</td>
+          <td class="funding-col">€ 3.00 M</td>
+          <td class="num-projects">6</td>
+        </tr>
+        <tr class="highlight" data-page="21" data-scope="Prevention, detection and deterrence of crime & terrorism via societal understanding." data-results="• Socio-cultural crime profiling.\n• Radicalisation awareness campaigns.\n• Community engagement metrics." data-criteria="• RIA action.\n• ≥1 Police Authority + 1 NGO/CSO from ≥2 Member States." data-funding="3.00" data-projects="4">
+          <td>FCT</td>
+          <td>HORIZON-CL3-2025-01-FCT-02</td>
+          <td>Prevention, detection and deterrence of crime and terrorism</td>
+          <td>RIA</td>
+          <td>5</td>
+          <td class="funding-col">€ 3.00 M</td>
+          <td class="num-projects">4</td>
+        </tr>
+        <tr class="highlight" data-page="24" data-scope="Improve intelligence picture & organised crime deterrence." data-results="• Criminal-network detection platforms.\n• Cross-border intel-sharing protocols.\n• Money-laundering analytics." data-criteria="• IA action.\n• ≥3 Police Authorities from ≥3 Member States." data-funding="3.75" data-projects="2">
+          <td>FCT</td>
+          <td>HORIZON-CL3-2025-01-FCT-03</td>
+          <td>Improved intelligence picture and organised crime deterrence</td>
+          <td>IA</td>
+          <td>6 → 7</td>
+          <td class="funding-col">€ 3.75 M</td>
+          <td class="num-projects">2</td>
+        </tr>
+        <tr class="highlight main-topic" data-page="27" data-scope="Humanitarian demining & UXO risk education." data-results="• Autonomous mine-detection tools.\n• UXO risk-education curricula.\n• SOPs for demining practitioners." data-criteria="• IA action.\n• ≥1 humanitarian demining org + 2 NGOs (incl. Ukraine)." data-funding="6.00" data-projects="1">
+          <td>FCT</td>
+          <td>HORIZON-CL3-2025-01-FCT-04</td>
+          <td>Humanitarian demining / UXO and risk education</td>
+          <td>IA</td>
+          <td>6 → 7</td>
+          <td class="funding-col">€ 6.00 M</td>
+          <td class="num-projects">1</td>
+        </tr>
+        <!-- BM -->
+        <tr class="highlight" data-page="33" data-scope="Efficient border surveillance & maritime security." data-results="• Modular sensor fusion.\n• Autonomous maritime patrol drones.\n• Human-rights safeguarding AI." data-criteria="• IA action.\n• ≥2 Border/Coast Guards from ≥2 Member States." data-funding="3.33" data-projects="3">
+          <td>BM</td>
+          <td>HORIZON-CL3-2025-01-BM-01</td>
+          <td>Efficient border surveillance and maritime security</td>
+          <td>IA</td>
+          <td>6 → 7</td>
+          <td class="funding-col">€ 3.33 M</td>
+          <td class="num-projects">3</td>
+        </tr>
+        <tr class="highlight" data-page="36" data-scope="Secured & facilitated crossing of external borders." data-results="• Secure digital ID wallets.\n• Biometric verification sandboxes.\n• Automated border-control kiosks." data-criteria="• RIA action.\n• ≥2 Border/Coast Guards from ≥2 Member States." data-funding="3.00" data-projects="3">
+          <td>BM</td>
+          <td>HORIZON-CL3-2025-01-BM-02</td>
+          <td>Secured and facilitated crossing of external borders</td>
+          <td>RIA</td>
+          <td>5</td>
+          <td class="funding-col">€ 3.00 M</td>
+          <td class="num-projects">3</td>
+        </tr>
+        <tr class="highlight main-topic" data-page="39" data-scope="Better customs and supply chain security." data-results="• Tamper-evident logistics trackers.\n• Illicit goods detection analytics.\n• Supply-chain risk dashboards." data-criteria="• IA action.\n• ≥2 Customs Authorities from ≥2 Member States." data-funding="3.00" data-projects="3">
+          <td>BM</td>
+          <td>HORIZON-CL3-2025-01-BM-03</td>
+          <td>Better customs and supply chain security</td>
+          <td>IA</td>
+          <td>6 → 7</td>
+          <td class="funding-col">€ 3.00 M</td>
+          <td class="num-projects">3</td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="tooltip" class="tooltip"></div>
+  </div>
 
   <script>
-  const tooltip = document.getElementById('tooltip');
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  
-  // Create a container for PDF embedding with Google Docs Viewer
-  const pdfContainer = document.createElement('div');
-  pdfContainer.id = 'pdf-container';
-  pdfContainer.style.position = 'fixed';
-  pdfContainer.style.top = '0';
-  pdfContainer.style.left = '0';
-  pdfContainer.style.width = '100%';
-  pdfContainer.style.height = '100%';
-  pdfContainer.style.backgroundColor = 'rgba(0,0,0,0.9)';
-  pdfContainer.style.zIndex = '9999';
-  pdfContainer.style.display = 'none';
-  
-  // Create close button for PDF viewer
-  const closeButton = document.createElement('button');
-  closeButton.textContent = '× Close';
-  closeButton.style.position = 'absolute';
-  closeButton.style.top = '10px';
-  closeButton.style.right = '10px';
-  closeButton.style.zIndex = '10000';
-  closeButton.style.padding = '5px 10px';
-  closeButton.style.backgroundColor = '#005a87';
-  closeButton.style.color = 'white';
-  closeButton.style.border = 'none';
-  closeButton.style.borderRadius = '5px';
-  closeButton.style.cursor = 'pointer';
-  closeButton.onclick = function() {
-    pdfContainer.style.display = 'none';
-    const pdfFrame = document.getElementById('pdf-frame');
-    if (pdfFrame) {
-      pdfFrame.src = '';
+    const tooltip = document.getElementById('tooltip');
+    const basePdf = new URL('ec_rtd_he-wp-2025-cluster3-pre.pdf', window.location.href).href;
+    const isMobile = 'ontouchstart' in window;
+
+    function showTip(e, row) {
+      const { scope, results, criteria, funding, projects } = row.dataset;
+      tooltip.innerHTML = `
+        <strong>Scope</strong><br>${scope}<br><br>
+        <strong>Expected Results</strong><ul>
+          ${results.split('•').filter(Boolean).map(r => `<li>${r.trim()}</li>`).join('')}
+        </ul>
+        <strong>Eligibility</strong><br>${criteria}<br><br>
+        <strong>Funding</strong>: € ${funding} M<br>
+        <strong># Projects</strong>: ${projects}
+      `;
+      tooltip.style.display = 'block';
+      tooltip.style.opacity = '1';
+      moveTip(e);
     }
-  };
-  
-  // Create iframe for Google Docs Viewer
-  const pdfFrame = document.createElement('iframe');
-  pdfFrame.id = 'pdf-frame';
-  pdfFrame.style.width = '100%';
-  pdfFrame.style.height = '100%';
-  pdfFrame.style.border = 'none';
-  
-  // Add elements to document
-  pdfContainer.appendChild(closeButton);
-  pdfContainer.appendChild(pdfFrame);
-  document.body.appendChild(pdfContainer);
-  
-  // Track the currently shown tooltip element
-  let activeRow = null;
-  // Track double tap for mobile
-  let lastTap = 0;
 
-  function showTip(e, row) {
-    // Set this row as active
-    activeRow = row;
-    
-    const { topic, scope, results, criteria, funding, projects, page } = row.dataset;
-    tooltip.innerHTML = `
-      <div class="tooltip-title">${topic}</div>
-      <strong>Scope</strong><br>${scope}<br><br>
-      <strong>Expected Results</strong><ul>
-        ${results.split('•').filter(Boolean).map(r => `<li>${r.trim()}</li>`).join('')}
-      </ul>
-      <strong>Key Eligibility Criteria</strong><br>${criteria}<br><br>
-      <strong>Funding per Project</strong>: €${funding}M<br>
-      <strong>Projects to Fund</strong>: ${projects}
-    `;
-    tooltip.style.display = 'block';
-    tooltip.style.opacity = '1';
-    
-    // For mobile, position tooltip above the tap point
-    if (isMobile) {
-      tooltip.classList.add('mobile-tooltip');
-      
-      // Try to position above the finger if it's a tap event
-      if (e.type === 'touchstart' || e.type === 'click') {
-        const touchY = e.touches ? e.touches[0].pageY : e.pageY;
-        const touchX = e.touches ? e.touches[0].pageX : e.pageX;
-        
-        // Position above finger on mobile
-        const tooltipHeight = tooltip.offsetHeight;
-        tooltip.style.top = (touchY - tooltipHeight - 20) + 'px';
-        tooltip.style.left = Math.max(10, touchX - 150) + 'px'; // Center approximately
-      }
-    } else {
-      tooltip.classList.remove('mobile-tooltip');
-      // Position the tooltip near the cursor for desktop
-      const x = e.pageX;
-      const y = e.pageY;
-      
-      // Calculate tooltip dimensions
-      const tipHeight = tooltip.offsetHeight;
-      const tipWidth = tooltip.offsetWidth;
-      const windowWidth = window.innerWidth;
-      const windowHeight = window.innerHeight;
-      
-      // Position tooltip, keeping it within viewport bounds
-      if (x + tipWidth + 20 > windowWidth) {
-        tooltip.style.left = (x - tipWidth - 10) + 'px';
-      } else {
-        tooltip.style.left = (x + 15) + 'px';
-      }
-      
-      if (y + tipHeight + 20 > windowHeight + window.scrollY) {
-        tooltip.style.top = (y - tipHeight - 10) + 'px';
-      } else {
-        tooltip.style.top = (y + 15) + 'px';
-      }
+    function moveTip(e) {
+      let x = e.pageX, y = e.pageY;
+      if (e.touches) { x = e.touches[0].pageX; y = e.touches[0].pageY; }
+      const tw = tooltip.offsetWidth, th = tooltip.offsetHeight;
+      const ww = window.innerWidth, wh = window.innerHeight;
+      tooltip.style.left = (x + tw + 20 > ww ? x - tw - 10 : x + 15) + 'px';
+      tooltip.style.top  = (y + th + 20 > wh + window.scrollY ? y - th - 10 : y + 15) + 'px';
     }
-  }
 
-  function hideTip() {
-    tooltip.style.opacity = '0';
-    setTimeout(() => {
-      if (tooltip.style.opacity === '0') { // Only hide if still fading out
-        tooltip.style.display = 'none';
-        tooltip.classList.remove('mobile-tooltip');
-        activeRow = null;
-      }
-    }, 300);
-  }
-
-  function openPdf(row) {
-    const page = row.dataset.page || '1';
-    
-    // Get the current URL and path components for PDF
-    const currentUrl = window.location.href;
-    const baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/') + 1);
-    const pdfPath = baseUrl + 'ec_rtd_he-wp-2025-cluster3-pre.pdf';
-    
-    // Get the full URL for the PDF to use with Google Docs Viewer
-    // Use Google Docs Viewer with page parameter
-    const googleDocsUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(pdfPath) + '&embedded=true';
-    
-    // Display PDF container
-    pdfContainer.style.display = 'block';
-    
-    // Set the src for the iframe
-    pdfFrame.src = googleDocsUrl;
-    
-    // Wait for iframe to load, then try to navigate to the specific page
-    pdfFrame.onload = function() {
-      try {
-        // Try to navigate to specific page
-        // Note: This approach may not be reliable as Google Docs Viewer doesn't directly support page parameters
-        // As a fallback, we'll open directly in a new tab if this doesn't work
-        const frameWindow = pdfFrame.contentWindow;
-        setTimeout(() => {
-          try {
-            frameWindow.location.hash = ":0.page." + (parseInt(page) - 1);
-          } catch (e) {
-            console.log("Could not set page in iframe:", e);
-          }
-        }, 2000);
-      } catch (e) {
-        console.log("Error accessing iframe content:", e);
-      }
-    };
-  }
-
-  function openPdfInNewTab(row) {
-    const page = row.dataset.page || '1';
-    
-    // Get the current URL and path components for PDF
-    const currentUrl = window.location.href;
-    const baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/') + 1);
-    const pdfPath = baseUrl + 'ec_rtd_he-wp-2025-cluster3-pre.pdf';
-    
-    // Open in new tab directly
-    window.open(pdfPath + '#page=' + page, '_blank');
-  }
-
-  document.querySelectorAll('tr.highlight').forEach(row => {
-    row.lastTap = 0;
-    
-    if (isMobile) {
-      // For mobile: handle tap/double tap
-      row.addEventListener('touchstart', function(e) {
-        const currentTime = new Date().getTime();
-        const tapLength = currentTime - this.lastTap;
-        
-        // Double tap detected (under 500ms between taps)
-        if (tapLength < 500 && tapLength > 0) {
-          e.preventDefault();
-          openPdfInNewTab(row); // Try direct method for mobile
-        } else {
-          // Single tap - show tooltip
-          e.preventDefault();
-          showTip(e, row);
-        }
-        
-        this.lastTap = currentTime;
-      });
-    } else {
-      // For desktop: keep tooltip visible during entire hover
-      row.addEventListener('mouseenter', e => {
-        showTip(e, row);
-      });
-      
-      // Update tooltip position during mouse movement
-      row.addEventListener('mousemove', e => {
-        if (activeRow === row) {
-          // Only update position, don't recreate tooltip
-          const x = e.pageX;
-          const y = e.pageY;
-          
-          // Calculate tooltip dimensions
-          const tipHeight = tooltip.offsetHeight;
-          const tipWidth = tooltip.offsetWidth;
-          const windowWidth = window.innerWidth;
-          const windowHeight = window.innerHeight;
-          
-          // Position tooltip, keeping it within viewport bounds
-          if (x + tipWidth + 20 > windowWidth) {
-            tooltip.style.left = (x - tipWidth - 10) + 'px';
-          } else {
-            tooltip.style.left = (x + 15) + 'px';
-          }
-          
-          if (y + tipHeight + 20 > windowHeight + window.scrollY) {
-            tooltip.style.top = (y - tipHeight - 10) + 'px';
-          } else {
-            tooltip.style.top = (y + 15) + 'px';
-          }
-        }
-      });
-      
-      row.addEventListener('mouseleave', e => {
-        // Only hide if we're leaving the row that owns the tooltip
-        if (activeRow === row) {
-          hideTip();
-        }
-      });
-      
-      // Open PDF on click for desktop - try the Google Docs method first
-      row.addEventListener('click', e => {
-        // On desktop, provide a backup option with direct opening
-        openPdf(row);
-      });
-      
-      // Add right-click handler for direct PDF opening
-      row.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        openPdfInNewTab(row);
-        return false;
-      });
+    function hideTip() {
+      tooltip.style.opacity = '0';
+      setTimeout(() => tooltip.style.display = 'none', 200);
     }
-  });
-  
-  // For mobile, handle document clicks to close tooltip
-  document.addEventListener('click', e => {
-    if (isMobile && tooltip.style.display === 'block') {
-      // If clicking outside the tooltip and the row
-      if (!tooltip.contains(e.target) && (!activeRow || !activeRow.contains(e.target))) {
-        hideTip();
-      }
+
+    function openPdf(page) {
+      window.open(basePdf + '#page=' + page, '_blank');
     }
-  });
-  
-  // Add explanatory instructions to the top of the page
-  const instructions = document.createElement('div');
-  instructions.style.margin = '0 0 20px 0';
-  instructions.style.padding = '10px';
-  instructions.style.backgroundColor = '#f1f8ff';
-  instructions.style.border = '1px solid #c8e1ff';
-  instructions.style.borderRadius = '5px';
-  instructions.innerHTML = `
-    <p style="margin: 0;"><strong>Instructions:</strong> 
-      Hover over any row to see details. Click a row to open the PDF with Google Docs Viewer. 
-      Right-click a row to open the PDF directly in your browser. 
-      On mobile: Tap for details, double-tap to open the PDF.
-    </p>
-  `;
-  
-  document.querySelector('.container').insertBefore(instructions, document.querySelector('#projects-table'));
+
+    document.querySelectorAll('tr.highlight').forEach(row => {
+      let lastTap = 0;
+      row.addEventListener('mouseenter', e => showTip(e, row));
+      row.addEventListener('mousemove', e => moveTip(e));
+      row.addEventListener('mouseleave', hideTip);
+      row.addEventListener('click', () => openPdf(row.dataset.page));
+
+      row.addEventListener('touchstart', e => {
+        e.preventDefault(); showTip(e, row);
+      }, { passive: false });
+      row.addEventListener('touchmove', e => moveTip(e));
+      row.addEventListener('touchend', e => {
+        hideTip(); const now = Date.now();
+        if (now - lastTap < 300) openPdf(row.dataset.page);
+        lastTap = now;
+      });
+      row.addEventListener('touchcancel', hideTip);
+    });
   </script>
-
 </body>
 </html>
