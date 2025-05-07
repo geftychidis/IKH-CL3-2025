@@ -1,339 +1,473 @@
 <!DOCTYPE html>
-<!-- saved from url=(0121)https://htmlpreview.github.io/?https://raw.githubusercontent.com/geftychidis/IKH-CL3-2025/main/IKH%20INTEREST%202025.HTML -->
-<html lang="en" data-qb-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="https://raw.githubusercontent.com/geftychidis/IKH-CL3-2025/main/IKH%20INTEREST%202025.HTML">--><base href=".">
-  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horizon Europe Cluster 3 – Projects 2025</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h1 { text-align: center; margin-bottom: 1em; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    tr.highlight { background-color: #ffffcc; cursor: pointer; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+      margin: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    h1 { 
+      text-align: center; 
+      margin-bottom: 1em; 
+      color: #005a87;
+      font-size: 1.8rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin-bottom: 1em;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td { 
+      border: 1px solid #e0e0e0; 
+      padding: 12px 8px; 
+      text-align: left; 
+      font-size: 0.9rem;
+      position: relative;
+    }
+    th { 
+      background-color: #005a87; 
+      color: white;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    tr {
+      transition: background-color 0.2s ease;
+    }
+    tr:hover { 
+      background-color: #f0f7ff; 
+      cursor: pointer; 
+    }
+    tr.highlight { 
+      background-color: #ffffcc; 
+    }
     /* IKH main topics style */
-    tr.main-topic { background-color: #ffcc99 !important; }
-    th { background-color: #f2f2f2; }
+    tr.main-topic { 
+      background-color: #ffcc99 !important; 
+    }
+    tr.main-topic:hover {
+      background-color: #ffbf80 !important;
+    }
     .tooltip {
       display: none;
       position: absolute;
-      max-width: 300px;
+      max-width: 350px;
       background: #fff;
       border: 1px solid #333;
-      padding: 10px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       z-index: 1000;
       pointer-events: none;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      text-align: left;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .tooltip-title {
+      font-weight: bold;
+      color: #005a87;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 5px;
+    }
+    .tooltip strong {
+      color: #005a87;
+    }
+    .tooltip ul {
+      margin: 5px 0;
+      padding-left: 20px;
+    }
+    .tooltip li {
+      margin-bottom: 3px;
+    }
+    td.funding-col, th.funding-col {
+      text-align: center;
+      white-space: nowrap;
+    }
+    td.num-projects, th.num-projects {
+      text-align: center;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      th, td {
+        padding: 8px 6px;
+        font-size: 0.8rem;
+      }
+      .tooltip {
+        max-width: 280px;
+        font-size: 0.75rem;
+      }
+      /* For mobile devices, make tooltip appear on tap and remain visible */
+      .mobile-tooltip {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        z-index: 2000;
+        border-radius: 5px 5px 0 0;
+        opacity: 1;
+      }
     }
   </style>
-<style id="PHTStyle" type="text/css">.qtip-content { font-family: "Times New Roman"; font-size: 17px; line-height: 19px; white-space: pre-wrap; } .qtip-max-width { max-width: 800px; }</style></head>
-<body data-new-gr-c-s-check-loaded="14.1234.0" data-gr-ext-installed="" data-hasqtip="0">
+</head>
+<body>
 
-<h1>Horizon Europe Cluster 3 – Projects 2025</h1>
+<div class="container">
+  <h1>Horizon Europe Cluster 3 – Projects 2025</h1>
 
-<table id="projects-table">
-  <thead>
-    <tr>
-      <th>Cluster</th>
-      <th>Topic Code</th>
-      <th>Title</th>
-      <th>Type of Action</th>
-      <th>TRL Expected</th>
-      <th>Page</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="highlight main-topic" data-page="55" data-scope="Engage citizens and local/regional authorities in enhanced disaster risk awareness, including education and preparedness." data-results="• Increased local disaster awareness and preparedness frameworks.
-• Innovative education modules for citizens and authorities.
-• Community engagement toolkits." data-criteria="• RIA action.
-• Active involvement of at least 1 Civil Society Organisation and 1 Police Authority from ≥2 Member States.">
-      <td>DRS</td>
-      <td>HORIZON-CL3-2025-01-DRS-01</td>
-      <td>Citizen and regional/local authority engagement in disaster risk awareness</td>
-      <td>RIA</td>
-      <td>5 → 4</td>
-      <td>55</td>
-    </tr>
-    <tr class="highlight" data-page="58" data-scope="Improve disaster risk management and governance to ensure self-sufficiency and sustainability of operations." data-results="• New governance models for disaster response.
-• Sustainable operation protocols.
-• Self-sufficiency metrics and toolkits." data-criteria="• RIA action.
-• Involvement of at least 1 public authority and 1 NGO from ≥2 Member States.">
-      <td>DRS</td>
-      <td>HORIZON-CL3-2025-01-DRS-02</td>
-      <td>Disaster risk management and governance</td>
-      <td>RIA</td>
-      <td>5 → 3.5</td>
-      <td>58</td>
-    </tr>
-    <tr class="highlight" data-page="61" data-scope="Test/validate tools, technologies and data for cross-border prevention, preparedness and response to climate, geological or CBRN threats." data-results="• Validated cross-border warning systems.
-• Toolkit for climate/extreme event response.
-• CBRN emergency data frameworks." data-criteria="• IA action.
-• At least 3 first-responder organisations from ≥3 Member States.">
-      <td>DRS</td>
-      <td>HORIZON-CL3-2025-01-DRS-03</td>
-      <td>Cross-border climate, geological, CBRN events</td>
-      <td>IA</td>
-      <td>6 → 4.5</td>
-      <td>61</td>
-    </tr>
-    <tr class="highlight main-topic" data-page="65" data-scope="Advance autonomous systems and robotics for high-risk disaster response in conflict-afflicted zones." data-results="• Multi-function autonomous platforms.
-• Enhanced situational awareness sensors.
-• Training guidelines for first responders." data-criteria="• IA action.
-• At least 3 first-responder bodies, including Ukraine partners.">
-      <td>DRS</td>
-      <td>HORIZON-CL3-2025-01-DRS-04</td>
-      <td>Autonomous systems and robotics for disaster response</td>
-      <td>IA</td>
-      <td>6 → 8</td>
-      <td>65</td>
-    </tr>
-    <tr class="highlight" data-page="44" data-scope="Improve preparedness, response and recovery from large-scale critical infrastructure disruptions." data-results="• New resilience modelling tools.
-• Virtual/physical stress-test platforms.
-• Post-incident investigation solutions." data-criteria="• IA action.
-• ≥3 practitioners (operators/authorities) from ≥3 Member States.">
-      <td>INFRA</td>
-      <td>HORIZON-CL3-2025-01-INFRA-01</td>
-      <td>Preparedness, response and recovery from CI disruption</td>
-      <td>IA</td>
-      <td>6 → 7</td>
-      <td>44</td>
-    </tr>
-    <tr class="highlight" data-page="47" data-scope="Explore the role of the human factor for critical infrastructure resilience." data-results="• Human-centric risk assessment tools.
-• Insider-threat detection methods.
-• Training curricula for operators." data-criteria="• RIA action.
-• ≥3 practitioners (operators/authorities) from ≥3 Member States.">
-      <td>INFRA</td>
-      <td>HORIZON-CL3-2025-01-INFRA-02</td>
-      <td>Human factor in infrastructure resilience</td>
-      <td>RIA</td>
-      <td>5</td>
-      <td>47</td>
-    </tr>
-    <tr class="highlight main-topic" data-page="19" data-scope="Modern info &amp; forensic evidence analysis and frontline policing." data-results="• Next-gen forensic toolchains.
-• Cloud-enabled on-site analysis.
-• Smart policing gear." data-criteria="• RIA action.
-• ≥2 Police Authorities from ≥2 Member States.">
-      <td>FCT</td>
-      <td>HORIZON-CL3-2025-01-FCT-01</td>
-      <td>Modern information and forensic evidence analysis and frontline policing</td>
-      <td>RIA</td>
-      <td>5</td>
-      <td>19</td>
-    </tr>
-    <tr class="highlight" data-page="21" data-scope="Prevention, detection and deterrence of crime &amp; terrorism via societal understanding." data-results="• Socio-cultural crime profiling.
-• Radicalisation awareness campaigns.
-• Community engagement metrics." data-criteria="• RIA action.
-• ≥1 Police Authority + 1 NGO/CSO from ≥2 Member States.">
-      <td>FCT</td>
-      <td>HORIZON-CL3-2025-01-FCT-02</td>
-      <td>Prevention, detection and deterrence of crime and terrorism</td>
-      <td>RIA</td>
-      <td>5</td>
-      <td>21</td>
-    </tr>
-    <tr class="highlight main-topic" data-page="27" data-scope="Humanitarian demining &amp; UXO risk education." data-results="• Autonomous mine-detection tools.
-• UXO risk-education curricula.
-• SOPs for demining practitioners." data-criteria="• IA action.
-• ≥1 humanitarian demining org + 2 NGOs (incl. Ukraine).">
-      <td>FCT</td>
-      <td>HORIZON-CL3-2025-01-FCT-04</td>
-      <td>Humanitarian demining / UXO and risk education</td>
-      <td>IA</td>
-      <td>6 → 7</td>
-      <td>27</td>
-    </tr>
-    <tr class="highlight" data-page="36" data-scope="Secured &amp; facilitated crossing of external borders." data-results="• Secure digital ID wallets.
-• Biometric verification sandboxes.
-• Automated border‐control kiosks." data-criteria="• RIA action.
-• ≥2 Border/Coast Guards from ≥2 Member States.">
-      <td>BM</td>
-      <td>HORIZON-CL3-2025-01-BM-02</td>
-      <td>Secured and facilitated crossing of external borders</td>
-      <td>RIA</td>
-      <td>5</td>
-      <td>36</td>
-    </tr>
-    <tr class="highlight main-topic" data-page="39" data-scope="Better customs and supply chain security." data-results="• Tamper-evident logistics trackers.
-• Illicit goods detection analytics.
-• Supply-chain risk dashboards." data-criteria="• IA action.
-• ≥2 Customs Authorities from ≥2 Member States.">
-      <td>BM</td>
-      <td>HORIZON-CL3-2025-01-BM-03</td>
-      <td>Better customs and supply chain security</td>
-      <td>IA</td>
-      <td>6 → 7</td>
-      <td>39</td>
-    </tr>
-    <tr class="highlight" data-page="73" data-scope="Uptake Acceleration Services to bridge R&amp;I and market deployment." data-results="• Innovation support schemes.
-• SME acceleration roadmaps.
-• Pilot adoption frameworks." data-criteria="• CSA action.
-• Public–private coordination.">
-      <td>SSRI</td>
-      <td>HORIZON-CL3-2025-01-SSRI-02</td>
-      <td>Uptake Acceleration Services</td>
-      <td>CSA</td>
-      <td>N/A</td>
-      <td>73</td>
-    </tr>
-    <!-- Remaining SSRI and CS rows unchanged -->
-  </tbody>
-</table>
+  <table id="projects-table">
+    <thead>
+      <tr>
+        <th>Cluster</th>
+        <th>Topic Code</th>
+        <th>Title</th>
+        <th>Type of Action</th>
+        <th>TRL Expected</th>
+        <th class="funding-col">Funding per Project</th>
+        <th class="num-projects">Projects to Fund</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="highlight main-topic" data-page="55" data-topic="HORIZON-CL3-2025-01-DRS-01" data-scope="Engage citizens and local/regional authorities in enhanced disaster risk awareness, including education and preparedness." data-results="• Increased local disaster awareness and preparedness frameworks.
+- Innovative education modules for citizens and authorities.
+- Community engagement toolkits." data-criteria="• RIA action.
+- Active involvement of at least 1 Civil Society Organisation and 1 Police Authority from ≥2 Member States." data-funding="Around 4.00" data-projects="3">
+        <td>DRS</td>
+        <td>HORIZON-CL3-2025-01-DRS-01</td>
+        <td>Citizen and regional/local authority engagement in disaster risk awareness</td>
+        <td>RIA</td>
+        <td>5 → 4</td>
+        <td class="funding-col">€4.00M</td>
+        <td class="num-projects">3</td>
+      </tr>
+      <tr class="highlight" data-page="58" data-topic="HORIZON-CL3-2025-01-DRS-02" data-scope="Improve disaster risk management and governance to ensure self-sufficiency and sustainability of operations." data-results="• New governance models for disaster response.
+- Sustainable operation protocols.
+- Self-sufficiency metrics and toolkits." data-criteria="• RIA action.
+- Involvement of at least 1 public authority and 1 NGO from ≥2 Member States." data-funding="Around 3.50" data-projects="3">
+        <td>DRS</td>
+        <td>HORIZON-CL3-2025-01-DRS-02</td>
+        <td>Disaster risk management and governance</td>
+        <td>RIA</td>
+        <td>5 → 3.5</td>
+        <td class="funding-col">€3.50M</td>
+        <td class="num-projects">3</td>
+      </tr>
+      <tr class="highlight" data-page="61" data-topic="HORIZON-CL3-2025-01-DRS-03" data-scope="Test/validate tools, technologies and data for cross-border prevention, preparedness and response to climate, geological or CBRN threats." data-results="• Validated cross-border warning systems.
+- Toolkit for climate/extreme event response.
+- CBRN emergency data frameworks." data-criteria="• IA action.
+- At least 3 first-responder organisations from ≥3 Member States." data-funding="Around 4.50" data-projects="3">
+        <td>DRS</td>
+        <td>HORIZON-CL3-2025-01-DRS-03</td>
+        <td>Cross-border climate, geological, CBRN events</td>
+        <td>IA</td>
+        <td>6 → 4.5</td>
+        <td class="funding-col">€4.50M</td>
+        <td class="num-projects">3</td>
+      </tr>
+      <tr class="highlight main-topic" data-page="65" data-topic="HORIZON-CL3-2025-01-DRS-04" data-scope="Advance autonomous systems and robotics for high-risk disaster response in conflict-afflicted zones." data-results="• Multi-function autonomous platforms.
+- Enhanced situational awareness sensors.
+- Training guidelines for first responders." data-criteria="• IA action.
+- At least 3 first-responder bodies, including Ukraine partners." data-funding="Around 5.00" data-projects="1">
+        <td>DRS</td>
+        <td>HORIZON-CL3-2025-01-DRS-04</td>
+        <td>Autonomous systems and robotics for disaster response</td>
+        <td>IA</td>
+        <td>6 → 8</td>
+        <td class="funding-col">€5.00M</td>
+        <td class="num-projects">1</td>
+      </tr>
+      <tr class="highlight" data-page="44" data-topic="HORIZON-CL3-2025-01-INFRA-01" data-scope="Improve preparedness, response and recovery from large-scale critical infrastructure disruptions." data-results="• New resilience modelling tools.
+- Virtual/physical stress-test platforms.
+- Post-incident investigation solutions." data-criteria="• IA action.
+- ≥3 practitioners (operators/authorities) from ≥3 Member States." data-funding="Around 5.00" data-projects="3">
+        <td>INFRA</td>
+        <td>HORIZON-CL3-2025-01-INFRA-01</td>
+        <td>Preparedness, response and recovery from CI disruption</td>
+        <td>IA</td>
+        <td>6 → 7</td>
+        <td class="funding-col">€5.00M</td>
+        <td class="num-projects">3</td>
+      </tr>
+      <tr class="highlight" data-page="47" data-topic="HORIZON-CL3-2025-01-INFRA-02" data-scope="Explore the role of the human factor for critical infrastructure resilience." data-results="• Human-centric risk assessment tools.
+- Insider-threat detection methods.
+- Training curricula for operators." data-criteria="• RIA action.
+- ≥3 practitioners (operators/authorities) from ≥3 Member States." data-funding="Around 3.50" data-projects="2">
+        <td>INFRA</td>
+        <td>HORIZON-CL3-2025-01-INFRA-02</td>
+        <td>Human factor in infrastructure resilience</td>
+        <td>RIA</td>
+        <td>5</td>
+        <td class="funding-col">€3.50M</td>
+        <td class="num-projects">2</td>
+      </tr>
+      <tr class="highlight main-topic" data-page="19" data-topic="HORIZON-CL3-2025-01-FCT-01" data-scope="Modern info & forensic evidence analysis and frontline policing." data-results="• Next-gen forensic toolchains.
+- Cloud-enabled on-site analysis.
+- Smart policing gear." data-criteria="• RIA action.
+- ≥2 Police Authorities from ≥2 Member States." data-funding="Around 3.00" data-projects="6">
+        <td>FCT</td>
+        <td>HORIZON-CL3-2025-01-FCT-01</td>
+        <td>Modern information and forensic evidence analysis and frontline policing</td>
+        <td>RIA</td>
+        <td>5</td>
+        <td class="funding-col">€3.00M</td>
+        <td class="num-projects">6</td>
+      </tr>
+      <tr class="highlight" data-page="21" data-topic="HORIZON-CL3-2025-01-FCT-02" data-scope="Prevention, detection and deterrence of crime & terrorism via societal understanding." data-results="• Socio-cultural crime profiling.
+- Radicalisation awareness campaigns.
+- Community engagement metrics." data-criteria="• RIA action.
+- ≥1 Police Authority + 1 NGO/CSO from ≥2 Member States." data-funding="Around 3.00" data-projects="4">
+        <td>FCT</td>
+        <td>HORIZON-CL3-2025-01-FCT-02</td>
+        <td>Prevention, detection and deterrence of crime and terrorism</td>
+        <td>RIA</td>
+        <td>5</td>
+        <td class="funding-col">€3.00M</td>
+        <td class="num-projects">4</td>
+      </tr>
+      <tr class="highlight main-topic" data-page="27" data-topic="HORIZON-CL3-2025-01-FCT-04" data-scope="Humanitarian demining & UXO risk education." data-results="• Autonomous mine-detection tools.
+- UXO risk-education curricula.
+- SOPs for demining practitioners." data-criteria="• IA action.
+- ≥1 humanitarian demining org + 2 NGOs (incl. Ukraine)." data-funding="Around 6.00" data-projects="1">
+        <td>FCT</td>
+        <td>HORIZON-CL3-2025-01-FCT-04</td>
+        <td>Humanitarian demining / UXO and risk education</td>
+        <td>IA</td>
+        <td>6 → 7</td>
+        <td class="funding-col">€6.00M</td>
+        <td class="num-projects">1</td>
+      </tr>
+      <tr class="highlight" data-page="36" data-topic="HORIZON-CL3-2025-01-BM-02" data-scope="Secured & facilitated crossing of external borders." data-results="• Secure digital ID wallets.
+- Biometric verification sandboxes.
+- Automated border‐control kiosks." data-criteria="• RIA action.
+- ≥2 Border/Coast Guards from ≥2 Member States." data-funding="Around 3.00" data-projects="3">
+        <td>BM</td>
+        <td>HORIZON-CL3-2025-01-BM-02</td>
+        <td>Secured and facilitated crossing of external borders</td>
+        <td>RIA</td>
+        <td>5</td>
+        <td class="funding-col">€3.00M</td>
+        <td class="num-projects">3</td>
+      </tr>
+      <tr class="highlight main-topic" data-page="39" data-topic="HORIZON-CL3-2025-01-BM-03" data-scope="Better customs and supply chain security." data-results="• Tamper-evident logistics trackers.
+- Illicit goods detection analytics.
+- Supply-chain risk dashboards." data-criteria="• IA action.
+- ≥2 Customs Authorities from ≥2 Member States." data-funding="Around 3.00" data-projects="3">
+        <td>BM</td>
+        <td>HORIZON-CL3-2025-01-BM-03</td>
+        <td>Better customs and supply chain security</td>
+        <td>IA</td>
+        <td>6 → 7</td>
+        <td class="funding-col">€3.00M</td>
+        <td class="num-projects">3</td>
+      </tr>
+      <tr class="highlight" data-page="73" data-topic="HORIZON-CL3-2025-01-SSRI-02" data-scope="Uptake Acceleration Services to bridge R&I and market deployment." data-results="• Innovation support schemes.
+- SME acceleration roadmaps.
+- Pilot adoption frameworks." data-criteria="• CSA action.
+- Public–private coordination." data-funding="Around 5.00" data-projects="1">
+        <td>SSRI</td>
+        <td>HORIZON-CL3-2025-01-SSRI-02</td>
+        <td>Uptake Acceleration Services</td>
+        <td>CSA</td>
+        <td>N/A</td>
+        <td class="funding-col">€5.00M</td>
+        <td class="num-projects">1</td>
+      </tr>
+    </tbody>
+  </table>
 
-<div id="tooltip" class="tooltip" style="display: none; top: 580px; left: 753px;">
-        <strong>Scope</strong><br>Better customs and supply chain security.<br><br>
-        <strong>Expected Results</strong><ul>
-          <li>Tamper-evident logistics trackers.</li><li>Illicit goods detection analytics.</li><li>Supply-chain risk dashboards.</li>
-        </ul>
-        <strong>Key Eligibility Criteria</strong><br>• IA action.
-• ≥2 Customs Authorities from ≥2 Member States.
-      </div>
+  <div id="tooltip" class="tooltip"></div>
+</div>
 
 <script>
   const tooltip = document.getElementById('tooltip');
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  
+  // Track the currently shown tooltip element
+  let activeRow = null;
+  // Track double tap for mobile
+  let lastTap = 0;
+
+  function showTip(e, row) {
+    // Set this row as active
+    activeRow = row;
+    
+    const { topic, scope, results, criteria, funding, projects, page } = row.dataset;
+    tooltip.innerHTML = `
+      <div class="tooltip-title">${topic}</div>
+      <strong>Scope</strong><br>${scope}<br><br>
+      <strong>Expected Results</strong><ul>
+        ${results.split('•').filter(Boolean).map(r => `<li>${r.trim()}</li>`).join('')}
+      </ul>
+      <strong>Key Eligibility Criteria</strong><br>${criteria}<br><br>
+      <strong>Funding per Project</strong>: €${funding}M<br>
+      <strong>Projects to Fund</strong>: ${projects}
+    `;
+    tooltip.style.display = 'block';
+    tooltip.style.opacity = '1';
+    
+    // For mobile, position tooltip above the tap point
+    if (isMobile) {
+      tooltip.classList.add('mobile-tooltip');
+      
+      // Try to position above the finger if it's a tap event
+      if (e.type === 'touchstart' || e.type === 'click') {
+        const touchY = e.touches ? e.touches[0].pageY : e.pageY;
+        const touchX = e.touches ? e.touches[0].pageX : e.pageX;
+        
+        // Position above finger on mobile
+        const tooltipHeight = tooltip.offsetHeight;
+        tooltip.style.top = (touchY - tooltipHeight - 20) + 'px';
+        tooltip.style.left = Math.max(10, touchX - 150) + 'px'; // Center approximately
+      }
+    } else {
+      tooltip.classList.remove('mobile-tooltip');
+      // Position the tooltip near the cursor for desktop
+      const x = e.pageX;
+      const y = e.pageY;
+      
+      // Calculate tooltip dimensions
+      const tipHeight = tooltip.offsetHeight;
+      const tipWidth = tooltip.offsetWidth;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+      
+      // Position tooltip, keeping it within viewport bounds
+      if (x + tipWidth + 20 > windowWidth) {
+        tooltip.style.left = (x - tipWidth - 10) + 'px';
+      } else {
+        tooltip.style.left = (x + 15) + 'px';
+      }
+      
+      if (y + tipHeight + 20 > windowHeight + window.scrollY) {
+        tooltip.style.top = (y - tipHeight - 10) + 'px';
+      } else {
+        tooltip.style.top = (y + 15) + 'px';
+      }
+    }
+  }
+
+  function hideTip() {
+    tooltip.style.opacity = '0';
+    setTimeout(() => {
+      if (tooltip.style.opacity === '0') { // Only hide if still fading out
+        tooltip.style.display = 'none';
+        tooltip.classList.remove('mobile-tooltip');
+        activeRow = null;
+      }
+    }, 300);
+  }
+
+  function openPdf(row) {
+    const page = row.dataset.page || '1';
+    const pdfUrl = `ec_rtd_he-wp-2025-cluster3-pre.pdf#page=${page}`;
+    
+    // Open PDF
+    window.open(pdfUrl, '_blank');
+  }
 
   document.querySelectorAll('tr.highlight').forEach(row => {
     row.lastTap = 0;
-
-    const showTip = e => {
-      const { scope, results, criteria } = row.dataset;
-      tooltip.innerHTML = `
-        <strong>Scope</strong><br>${scope}<br><br>
-        <strong>Expected Results</strong><ul>
-          ${results.split('•').filter(Boolean).map(r => `<li>${r.trim()}</li>`).join('')}
-        </ul>
-        <strong>Key Eligibility Criteria</strong><br>${criteria}
-      `;
-      tooltip.style.display = 'block';
-    };
-
-    const moveTip = e => {
-      let x, y;
-      if (e.touches) {
-        x = e.touches[0].pageX;
-        y = e.touches[0].pageY;
-        const tipH = tooltip.offsetHeight;
-        tooltip.style.top  = (y - tipH - 10) + 'px';
-        tooltip.style.left = (x + 15) + 'px';
-      } else {
-        x = e.pageX;
-        y = e.pageY;
-        tooltip.style.top  = (y + 15) + 'px';
-        tooltip.style.left = (x + 15) + 'px';
+    
+    if (isMobile) {
+      // For mobile: handle tap/double tap
+      row.addEventListener('touchstart', function(e) {
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - this.lastTap;
+        
+        // Double tap detected (under 500ms between taps)
+        if (tapLength < 500 && tapLength > 0) {
+          e.preventDefault();
+          openPdf(row);
+        } else {
+          // Single tap - show tooltip
+          e.preventDefault();
+          showTip(e, row);
+        }
+        
+        this.lastTap = currentTime;
+      });
+    } else {
+      // For desktop: keep tooltip visible during entire hover
+      row.addEventListener('mouseenter', e => {
+        showTip(e, row);
+      });
+      
+      // Update tooltip position during mouse movement
+      row.addEventListener('mousemove', e => {
+        if (activeRow === row) {
+          // Only update position, don't recreate tooltip
+          const x = e.pageX;
+          const y = e.pageY;
+          
+          // Calculate tooltip dimensions
+          const tipHeight = tooltip.offsetHeight;
+          const tipWidth = tooltip.offsetWidth;
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+          
+          // Position tooltip, keeping it within viewport bounds
+          if (x + tipWidth + 20 > windowWidth) {
+            tooltip.style.left = (x - tipWidth - 10) + 'px';
+          } else {
+            tooltip.style.left = (x + 15) + 'px';
+          }
+          
+          if (y + tipHeight + 20 > windowHeight + window.scrollY) {
+            tooltip.style.top = (y - tipHeight - 10) + 'px';
+          } else {
+            tooltip.style.top = (y + 15) + 'px';
+          }
+        }
+      });
+      
+      row.addEventListener('mouseleave', e => {
+        // Only hide if we're leaving the row that owns the tooltip
+        if (activeRow === row) {
+          hideTip();
+        }
+      });
+      
+      // Open PDF on click for desktop
+      row.addEventListener('click', e => {
+        openPdf(row);
+      });
+    }
+  });
+  
+  // For mobile, handle document clicks to close tooltip
+  document.addEventListener('click', e => {
+    if (isMobile && tooltip.style.display === 'block') {
+      // If clicking outside the tooltip and the row
+      if (!tooltip.contains(e.target) && (!activeRow || !activeRow.contains(e.target))) {
+        hideTip();
       }
-    };
-
-    const hideTip = () => tooltip.style.display = 'none';
-
-    const openPdf = () => {
-      const page = row.dataset.page || '1';
-      const url = `https://raw.githack.com/geftychidis/IKH-CL3-2025/main/ec_rtd_he-wp-2025-cluster3-pre.pdf#page=${page}`;
-      let win = window.open(url, '_blank');
-      if (!win) setTimeout(() => { win = window.open(url, '_blank'); if (!win) window.location.href = url; }, 300);
-    };
-
-    row.addEventListener('mouseenter', showTip);
-    row.addEventListener('mousemove', moveTip);
-    row.addEventListener('mouseleave', hideTip);
-
-    row.addEventListener('touchstart', e => {
-      e.preventDefault();
-      showTip(e);
-      moveTip(e);
-    }, { passive: false });
-    row.addEventListener('touchmove', moveTip);
-    row.addEventListener('touchend', e => {
-      hideTip();
-      const now = Date.now();
-      if (now - row.lastTap < 300) openPdf();
-      row.lastTap = now;
-    });
-    row.addEventListener('touchcancel', hideTip);
-
-    row.addEventListener('click', openPdf);
+    }
   });
 </script>
 
-
-
-<script>
-  const tooltip = document.getElementById('tooltip');
-
-  document.querySelectorAll('tr.highlight').forEach(row => {
-    row.lastTap = 0;
-
-    const showTip = e => {
-      const { scope, results, criteria } = row.dataset;
-      tooltip.innerHTML = `
-        <strong>Scope</strong><br>${scope}<br><br>
-        <strong>Expected Results</strong><ul>
-          ${results.split('•').filter(Boolean).map(r => `<li>${r.trim()}</li>`).join('')}
-        </ul>
-        <strong>Key Eligibility Criteria</strong><br>${criteria}
-      `;
-      tooltip.style.display = 'block';
-    };
-
-    const moveTip = e => {
-      let x, y;
-      if (e.touches) {
-        x = e.touches[0].pageX;
-        y = e.touches[0].pageY;
-        const tipH = tooltip.offsetHeight;
-        tooltip.style.top  = (y - tipH - 10) + 'px';
-        tooltip.style.left = (x + 15) + 'px';
-      } else {
-        x = e.pageX;
-        y = e.pageY;
-        tooltip.style.top  = (y + 15) + 'px';
-        tooltip.style.left = (x + 15) + 'px';
-      }
-    };
-
-    const hideTip = () => tooltip.style.display = 'none';
-
-    const openPdf = () => {
-      const page = row.dataset.page || '1';
-      const url = `https://raw.githack.com/geftychidis/IKH-CL3-2025/main/ec_rtd_he-wp-2025-cluster3-pre.pdf#page=${page}`;
-      let win = window.open(url, '_blank');
-      if (!win) setTimeout(() => { win = window.open(url, '_blank'); if (!win) window.location.href = url; }, 300);
-    };
-
-    row.addEventListener('mouseenter', showTip);
-    row.addEventListener('mousemove', moveTip);
-    row.addEventListener('mouseleave', hideTip);
-
-    row.addEventListener('touchstart', e => {
-      e.preventDefault();
-      showTip(e);
-      moveTip(e);
-    }, { passive: false });
-    row.addEventListener('touchmove', moveTip);
-    row.addEventListener('touchend', e => {
-      hideTip();
-      const now = Date.now();
-      if (now - row.lastTap < 300) openPdf();
-      row.lastTap = now;
-    });
-    row.addEventListener('touchcancel', hideTip);
-
-    row.addEventListener('click', openPdf);
-  });
-</script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
-      div.grammarly-desktop-integration {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select:none;
-        user-select:none;
-      }
-
-      div.grammarly-desktop-integration:before {
-        content: attr(data-content);
-      }
-    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
+</body>
+</html>
