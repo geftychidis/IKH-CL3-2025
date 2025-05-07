@@ -302,9 +302,54 @@
   <div id="tooltip" class="tooltip"></div>
 </div>
 
-<script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
+  <script>
   const tooltip = document.getElementById('tooltip');
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  
+  // Create a container for PDF embedding
+  const pdfContainer = document.createElement('div');
+  pdfContainer.id = 'pdf-container';
+  pdfContainer.style.position = 'fixed';
+  pdfContainer.style.top = '0';
+  pdfContainer.style.left = '0';
+  pdfContainer.style.width = '100%';
+  pdfContainer.style.height = '100%';
+  pdfContainer.style.backgroundColor = 'rgba(0,0,0,0.9)';
+  pdfContainer.style.zIndex = '9999';
+  pdfContainer.style.display = 'none';
+  
+  // Create close button for PDF viewer
+  const closeButton = document.createElement('button');
+  closeButton.textContent = '× Close';
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '10px';
+  closeButton.style.right = '10px';
+  closeButton.style.zIndex = '10000';
+  closeButton.style.padding = '5px 10px';
+  closeButton.style.backgroundColor = '#005a87';
+  closeButton.style.color = 'white';
+  closeButton.style.border = 'none';
+  closeButton.style.borderRadius = '5px';
+  closeButton.style.cursor = 'pointer';
+  closeButton.onclick = function() {
+    pdfContainer.style.display = 'none';
+    const pdfContent = document.getElementById('pdf-content');
+    if (pdfContent) {
+      pdfContent.innerHTML = '';
+    }
+  };
+  
+  // Create PDF content div
+  const pdfContent = document.createElement('div');
+  pdfContent.id = 'pdf-content';
+  pdfContent.style.width = '100%';
+  pdfContent.style.height = '100%';
+  
+  // Add elements to document
+  pdfContainer.appendChild(closeButton);
+  pdfContainer.appendChild(pdfContent);
+  document.body.appendChild(pdfContainer);
   
   // Track the currently shown tooltip element
   let activeRow = null;
@@ -383,31 +428,21 @@
 
   function openPdf(row) {
     const page = row.dataset.page || '1';
-    // Make sure to use the correct path to your PDF file
-    const pdfUrl = `ec_rtd_he-wp-2025-cluster3-pre.pdf#page=${page}`;
+    const pdfPath = 'ec_rtd_he-wp-2025-cluster3-pre.pdf';
     
-    // Try to open PDF in a new tab
-    try {
-      const newWindow = window.open(pdfUrl, '_blank');
-      
-      // If opening fails, provide fallback
-      if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-        console.log("Popup blocked or failed to open PDF. Creating fallback link.");
-        // Create an invisible link and click it programmatically
-        const link = document.createElement('a');
-        link.href = pdfUrl;
-        link.target = '_blank';
-        link.style.display = 'none';
-        document.body.appendChild(link);
-        link.click();
-        setTimeout(() => {
-          document.body.removeChild(link);
-        }, 100);
-      }
-    } catch (e) {
-      console.error("Error opening PDF:", e);
-      // Direct browser to PDF as a fallback
-      window.location.href = pdfUrl;
+    // Show PDF container
+    pdfContainer.style.display = 'block';
+    
+    // Use PDFObject to embed the PDF
+    if (PDFObject.supportsPDFs) {
+      PDFObject.embed(pdfPath + '#page=' + page, pdfContent, {
+        fallbackLink: `<p>This browser doesn't support embedded PDFs. <a href="${pdfPath}#page=${page}" target="_blank">Click here to view the PDF</a>.</p>`,
+        forcePDFJS: true,
+        PDFJS_URL: "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"
+      });
+    } else {
+      // Fallback for browsers that don't support PDFObject
+      pdfContent.innerHTML = `<iframe src="${pdfPath}#page=${page}" width="100%" height="100%" style="border: none;"></iframe>`;
     }
   }
 
@@ -489,7 +524,7 @@
       }
     }
   });
-</script>
+  </script>
 
 </body>
 </html>
