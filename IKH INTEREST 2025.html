@@ -383,10 +383,32 @@
 
   function openPdf(row) {
     const page = row.dataset.page || '1';
+    // Make sure to use the correct path to your PDF file
     const pdfUrl = `ec_rtd_he-wp-2025-cluster3-pre.pdf#page=${page}`;
     
-    // Open PDF
-    window.open(pdfUrl, '_blank');
+    // Try to open PDF in a new tab
+    try {
+      const newWindow = window.open(pdfUrl, '_blank');
+      
+      // If opening fails, provide fallback
+      if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+        console.log("Popup blocked or failed to open PDF. Creating fallback link.");
+        // Create an invisible link and click it programmatically
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.target = '_blank';
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        setTimeout(() => {
+          document.body.removeChild(link);
+        }, 100);
+      }
+    } catch (e) {
+      console.error("Error opening PDF:", e);
+      // Direct browser to PDF as a fallback
+      window.location.href = pdfUrl;
+    }
   }
 
   document.querySelectorAll('tr.highlight').forEach(row => {
